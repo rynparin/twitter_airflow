@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 import s3fs
 
-def  run_twitter_etl():
+def run_twitter_etl():
 
     access_key = "ipdaukyAl0Wgni9KONKFCl9Q8"
     access_secret = "4Z7m6pkq99FpkFGfTV9LQykcormkJkTeXrsxhaXG0l9cz3md2O"

@@ -6,11 +6,11 @@ import s3fs
 
 def run_twitter_etl():
 
-    access_key = "ipdaukyAl0Wgni9KONKFCl9Q8"
-    access_secret = "4Z7m6pkq99FpkFGfTV9LQykcormkJkTeXrsxhaXG0l9cz3md2O"
-    bearer = "AAAAAAAAAAAAAAAAAAAAAB3FiAEAAAAAIB%2BWub2%2F6XhR%2BLIxYej9eLPjVLs%3Dy5Egj0UtjI2bv06J9zCjP4DHskNLe2HDeDshVnb0FnBW7wxSGt"
-    consumer_key = "2899995049-6txAK1YwoPbAfPz1g46kjL43tMCpPgI6pMMSdDR"
-    consumer_secret = "qP93mw46U8R7DePOlNMSWm3aoFy2G0HrksqVjCLArgmKT"
+    access_key = ""
+    access_secret = ""
+    bearer = ""
+    consumer_key = ""
+    consumer_secret = ""
 
     # Twitter authentication
     auth = tweepy.OAuthHandler(access_key, access_secret)
@@ -19,7 +19,7 @@ def run_twitter_etl():
     #  Creating API object
     api = tweepy.API(auth)
 
-    tweets = api.user_timeline(screen_name='@elonmusk',
+    tweets = api.user_timeline(screen_name='******',
                             count=200,
                             include_rts=False,
                             tweet_mode='extended')
@@ -38,4 +38,4 @@ def run_twitter_etl():
         tweet_list.append(refined_tweet)
         
     df = pd.DataFrame(tweet_list)
-    df.to_csv("elonmusk_twitter_data.csv")
+    df.to_csv("****.csv")
